@@ -1,4 +1,4 @@
-import Cliente from '../Model/Cliente';
+const Cliente = require('../Model/Cliente');
 
 module.exports = app => {
     app.get('/clientes', (req, res) => {

@@ -1,6 +1,6 @@
-import ConfigExpress from './Config/ConfigExpress';
-import conexao from './Database/ConexaoMySQL';
-import tabelaCliente from './Infra/tableCliente';
+const ConfigExpress = require('./Config/ConfigExpress');
+const conexao = require('./Database/ConexaoMySQL');
+const tabelaCliente = require('./Infra/tableCliente');
 
 conexao.connect(erro => {
     if (erro)
@@ -8,7 +8,7 @@ conexao.connect(erro => {
     else {
         console.log("Conectado com sucesso!");
 
-        tabelaCliente();
+        tabelaCliente.init(conexao);
 
         const app = ConfigExpress();
 
