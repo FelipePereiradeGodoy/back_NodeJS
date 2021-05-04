@@ -5,7 +5,7 @@ module.exports = app => {
         Cliente.selecionarClientes(res);
     });
 
-    app.get('/Clientes/:id', (req, res) => {
+    app.get('/clientes/:id', (req, res) => {
         const idCliente = parseInt(req.params.id);
 
         Cliente.selecionarClienteId(idCliente, res);
